@@ -1,0 +1,3 @@
+rootProject.name = "Offline2"
+include ':app'
+include ':calc_model'
