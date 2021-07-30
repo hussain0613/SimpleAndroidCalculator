@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn = (Button) view;
         String input = (String)btn.getText();
         display_input(input);
-        display_result("");
+        //display_result("");
     }
 
     public void eql_btn_action(View view)
@@ -75,6 +75,6 @@ public class MainActivity extends AppCompatActivity {
         String txt = tv.getText().toString();
         int n = txt.length();
         if(n>0) tv.setText(txt.substring(0, n-1));
-        display_result("");
+        //display_result("");
     }
 }

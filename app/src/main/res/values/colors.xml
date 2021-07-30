@@ -12,4 +12,5 @@
     <color name="ac_color">#dd6666</color>
     <color name="eq_color">#228866</color>
     <color name="btn_text_color">#eeeeee</color>
+    <color name="display_color">#555555</color>
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_margin_top">5dp</dimen>
+    <dimen name="row_height">95dp</dimen>
+    <dimen name="row_width">360dp</dimen>
+    <dimen name="col_width">90dp</dimen>
+    <dimen name="col_width2">72dp</dimen>
+    <dimen name="col_gap">5dp</dimen>
+</resources>
