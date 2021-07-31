@@ -67,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
             display_result("invalid input");
         }catch (EmptyStackException err){
             display_result("invalid input");
+        }catch (NumberFormatException err){
+            display_result("invalid input");
         }
     }
     public void del_btn_action(View view)
