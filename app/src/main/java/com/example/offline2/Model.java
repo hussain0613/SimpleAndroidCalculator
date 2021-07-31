@@ -20,21 +20,21 @@ public class Model {
 
     @NonNull
     public String toString(){
-        StringBuilder repr = new StringBuilder("Calculator<input=" + input_string);
+        StringBuilder representation = new StringBuilder("Calculator<input=" + input_string);
 
-        repr.append(";infix="); //infix tokens
+        representation.append(";infix="); //infix tokens
         for(int i=0; i<infix_tokens.size(); ++i){
-            repr.append(infix_tokens.get(i)).append(",");
+            representation.append(infix_tokens.get(i)).append(",");
         }
 
-        repr.append(";rpn="); //reverse polish notation
+        representation.append(";rpn="); //reverse polish notation
         for(int i=0; i<postfix_tokens.size(); ++i){
-            repr.append(postfix_tokens.get(i)).append(",");
+            representation.append(postfix_tokens.get(i)).append(",");
         }
 
-        repr.append(";value=").append(value);
-        repr.append(">");
-        return repr.toString();
+        representation.append(";value=").append(value);
+        representation.append(">");
+        return representation.toString();
     }
     public double getValue() throws ArithmeticException, EmptyStackException, NumberFormatException{
         parse2();
@@ -51,24 +51,24 @@ public class Model {
     }
 
     private int get_precedence(char op) {
-        int prec;
+        int precedence;
         switch (op) {
             case '+':
             case '-':
-                prec = 1;
+                precedence = 1;
                 break;
             case '*':
             case '/':
-                prec = 2;
+                precedence = 2;
                 break;
             case '^':
-                prec = 3;
+                precedence = 3;
                 break;
             default:
-                prec = -1;
+                precedence = -1;
                 break;
         }
-        return prec;
+        return precedence;
     }
 
 
@@ -194,7 +194,7 @@ public class Model {
                         //System.out.println("got op "+ op +". adding op: " + conv_op_stack.peek());
                         postfix_tokens.add(conv_op_stack.pop() + "");
                     }
-                    // pushing op only if stack is empty or top is '(' or op_prec is >= top_prec
+                    // pushing op only if stack is empty or top is '(' or op_precedence is >= top_precedence
                     conv_op_stack.push(op);
                 }
                 else if(op == '(') {
